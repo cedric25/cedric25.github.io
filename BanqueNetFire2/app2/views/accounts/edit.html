@@ -1,0 +1,28 @@
+<div data-ng-controller="AccountsController" data-ng-init="findOneAccount(); findAllUsers();">
+
+	<form class="form-horizontal" novalidate="novalidate">
+
+		<div class="control-group">
+			<label class="control-label" for="name">Name</label>
+			<div class="controls">
+				<input type="text" data-ng-model="account.name" id="name" placeholder="Name">
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<button data-ng-click="create()" data-ng-show="noAccount" class="btn btn-primary">Create Account</button>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<a href="#/accounts">View all Accounts</a>
+			</div>
+		</div>
+
+	</form>
+
+	<p data-ng-show="err" class="error">{{err}}</p>
+
+</div>
