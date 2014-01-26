@@ -19,6 +19,12 @@ angular.module('banqueNetApp.controllers.accounts',
 				userAccountsRef.on("child_added", function(account) {
 					accountsRef.child(account.name()).once("value", function(objAccount) {
 						$scope.accountsList.push({id: objAccount.name(), val: objAccount.val()});
+						// Sorting
+						$scope.accountsList.sort(function(a, b) {
+							if (a.val.name < b.val.name) return -1;
+							if (b.val.name < a.val.name) return 1;
+							return 0;
+						});
 						$scope.$apply();
 					});
 				});
