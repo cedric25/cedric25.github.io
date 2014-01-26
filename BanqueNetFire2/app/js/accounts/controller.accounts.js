@@ -14,6 +14,10 @@ angular.module('banqueNetApp.controllers.accounts',
 			$scope.accountOperationsList = [];
 
 			$scope.findAllUserAccounts = function() {
+
+				// Reinit list
+				$scope.accountsList = [];
+
 				var accountsRef = AccountsService.getAccountsRef();
 				var userAccountsRef = AccountsService.getUserAccountsRef($rootScope.auth.user.id);
 				userAccountsRef.on("child_added", function(account) {
