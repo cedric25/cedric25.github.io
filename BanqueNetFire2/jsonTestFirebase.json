@@ -1,0 +1,53 @@
+{
+  "users": {
+    "5": {
+      "email": "user1@gmail.com",
+      "name": "ced",
+      "accounts": {
+        "account1": true
+      }
+    },
+    "user2": {
+      "email": "user2@gmail.com",
+      "name": "rick",
+      "accounts": {
+        "account2": true
+      }
+    },
+    "simplelogin:5" : {
+      "name" : "Cc",
+      "email" : "cc@cc.cc"
+    }
+  },
+  "accounts": {
+    "account1": {
+      "name": "Compte courant",
+      "balance": "150",
+      "operations": {
+        "op1": true,
+        "op2": true
+      }
+    },
+    "account2": {
+      "name": "Livret A",
+      "balance": "2700",
+      "operations": {
+        "op3": true
+      }
+    }
+  },
+  "operations": {
+    "op1": {
+      "date": "23/1/2014 22:26:21",
+      "amount": "37"
+    },
+    "op2": {
+      "date": "23/1/2014 22:26:21",
+      "amount": "100"
+    },
+    "op3": {
+      "date": "23/1/2014 22:26:21",
+      "amount": "15"
+    }
+  }
+}

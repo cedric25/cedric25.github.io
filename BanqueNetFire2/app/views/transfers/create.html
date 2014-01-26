@@ -1,0 +1,60 @@
+<div data-ng-controller="TransfersController" data-ng-init="findAllAccounts();">
+
+	<h2>New Transfer</h2>
+
+	<form class="form-horizontal" novalidate="novalidate">
+
+		<!-- From -->
+		<div class="control-group">
+			<label class="control-label" for="fromAccount">From</label>
+			<div class="controls">
+				<select id="fromAccount" data-ng-model="transfer.fromAccount" data-ng-options="account.val.name for account in accountsList">
+					<option data-ng-show="noAccount" value="">Choose an account:</option>
+				</select>
+			</div>
+		</div>
+
+		<!--
+			account.name for (key, account) in accountsList
+			key as account.name for (key, account) in accountsList
+
+			account.name for account.id in accountsList
+
+			select as label for value in array
+		-->
+
+		<!-- To -->
+		<div class="control-group">
+			<label class="control-label" for="toAccount">To</label>
+			<div class="controls">
+				<select id="toAccount" data-ng-model="transfer.toAccount" data-ng-options="account.val.name for account in accountsList">
+					<option data-ng-show="noAccount" value="">Choose an account:</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Amount -->
+		<div class="control-group">
+			<label class="control-label" for="amount">Amount</label>
+			<div class="controls">
+				<input type="text" data-ng-model="transfer.amount" id="amount" placeholder="Amount">
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<button data-ng-click="create()">Do Transfer</button>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="controls">
+				<a href="#/transfers">View all Transfers</a>
+			</div>
+		</div>
+
+	</form>
+
+	<p data-ng-show="err" class="error">{{err}}</p>
+
+</div>

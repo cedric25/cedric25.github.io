@@ -1,0 +1,25 @@
+<div data-ng-controller="AccountsController" data-ng-init="findOneAccount()">
+
+	<h2>{{ account.name }}</h2>
+
+	<p><strong>Balance: </strong>{{ account.balance | currency }}</p>
+
+	<br>
+
+	<h3>Last Operations</h3>
+
+	<table class="table table-striped">
+		<tbody>
+			<tr data-ng-repeat="operation in accountOperationsList">
+				<td>{{ operation.val.dateCrea }}</td>
+				<td>{{ operation.val.desc }}</td>
+				<td>{{ operation.val.amount | currency }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+
+	<a href="#/accounts">View all Accounts</a>
+
+</div>
