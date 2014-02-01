@@ -2,11 +2,11 @@
 <form style="text-align: center; margin-top: 25px;">
 
     <label>
-        <input type="text" ng-model="email" placeholder="Email" />
+        <input type="text" ng-model="email" placeholder="{{ 'Email' | translate }}" />
     </label>
 
     <label>
-        <input type="password" ng-model="pass" placeholder="Password" />
+        <input type="password" ng-model="pass" placeholder="{{ 'Password' | translate }}" />
     </label>
 
     <label ng-cloak ng-show="createMode">
@@ -14,7 +14,7 @@
         <input type="password" ng-model="confirm" />
     </label>
 
-    <button class="btn btn-primary" ng-click="login()" ng-hide="createMode">Log In</button>
+    <button class="btn btn-primary" ng-click="login()" ng-hide="createMode">{{ 'Log In' | translate }}</button>
     <!--<button class="btn btn-success" ng-click="createMode = true" ng-hide="createMode">Register</button>
     <button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</button>
     <button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>-->

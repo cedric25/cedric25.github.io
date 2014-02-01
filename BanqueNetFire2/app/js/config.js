@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('banqueNetApp.config', [])
+angular.module('banqueNetApp.config', ['pascalprecht.translate'])
 
 	.constant('version', '0.0.1')
 
@@ -8,7 +8,17 @@ angular.module('banqueNetApp.config', [])
 	.constant('loginRedirectPath', '/login')
 
 	// your Firebase URL goes here
-	.constant('FBURL', 'https://1389448125924.firebaseio.com');
+	.constant('FBURL', 'https://1389448125924.firebaseio.com')
+
+  // i18n
+  .config(['$translateProvider', function($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'locale/locale-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('en');
+    //$translateProvider.useLocalStorage();
+  }]);
 
 
 /*********************

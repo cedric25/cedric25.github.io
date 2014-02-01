@@ -1,7 +1,7 @@
 <div data-ng-controller="TransfersController" data-ng-init="findAllUserTransfers()">
 
-	<h2>Transfers</h2>
-	<h3>All Transfers</h3>
+	<h2>{{ 'Transfers' | translate }}</h2>
+	<h3>{{ 'All Transfers' | translate }}</h3>
 
 	<table class="table table-striped">
 		<tbody>
@@ -11,13 +11,13 @@
 			<td> > </td>
 			<td>{{ transfer.val.toAccountName }}</td>
 			<td>{{ transfer.val.amount | currency }}</td>
-			<td><a href="#/transfers/{{ transfer.id }}">Detail</a></td>
+			<td><a href="#/transfers/{{ transfer.id }}">{{ 'Detail' | translate }}</a></td>
 		</tr>
 		</tbody>
 	</table>
 
 	<br>
 
-	<a href="#/transfers/create">Make a new transfer</a>
+	<a href="#/transfers/create">{{ 'Make a new transfer' | translate }}</a>
 
 </div>

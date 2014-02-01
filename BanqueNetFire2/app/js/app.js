@@ -16,11 +16,13 @@ angular.module('banqueNetApp', [
 		'banqueNetApp.controllers.transfers',
 
 		'waitForAuth',
-		'routeSecurity'
+		'routeSecurity',
+
+    'pascalprecht.translate'
 ])
 
-   .run(['loginService', '$rootScope', 'FBURL', function(loginService, $rootScope, FBURL) {
-			 // establish authentication
-			 $rootScope.auth = loginService.init('/login');
-			 $rootScope.FBURL = FBURL;
-   }]);
+  .run(['loginService', '$rootScope', 'FBURL', function(loginService, $rootScope, FBURL) {
+    // establish authentication
+    $rootScope.auth = loginService.init('/login');
+    $rootScope.FBURL = FBURL;
+  }]);

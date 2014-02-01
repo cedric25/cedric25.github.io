@@ -2,11 +2,11 @@
 
 	<h2>{{ account.name }}</h2>
 
-	<p><strong>Balance: </strong>{{ account.balance | currency }}</p>
+	<p><strong>{{ 'Balance' | translate }}{{ ':' | translate }} </strong>{{ account.balance | currency }}</p>
 
 	<br>
 
-	<h3>Last Operations</h3>
+	<h3>{{ 'Last Operations' | translate }}</h3>
 
 	<table class="table table-striped">
 		<tbody>
@@ -20,6 +20,6 @@
 
 	<br>
 
-	<a href="#/accounts">View all Accounts</a>
+	<a href="#/accounts">{{ 'View all Accounts' | translate }}</a>
 
 </div>

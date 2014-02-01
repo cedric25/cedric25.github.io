@@ -1,7 +1,7 @@
-<h2>Home</h2>
+<h2>{{ 'Home' | translate }}</h2>
 
-<p class="status good" data-ng-show="!!auth.user">Hello! You are logged in.</p>
-<p class="status" data-ng-hide="!!auth.user">Not logged in</p>
+<p class="status good" data-ng-show="!!auth.user">{{ 'home.loggedIn' | translate }}</p>
+<p class="status" data-ng-hide="!!auth.user">{{ 'home.notLoggedIn' | translate }}</p>
 <p class="status error" ng-show-auth="error">{{auth.error}}</p>
 
 <hr />

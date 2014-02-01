@@ -1,14 +1,14 @@
 <div data-ng-controller="TransfersController" data-ng-init="findOneTransfer()">
 
-	<h2>Transfer details</h2>
+	<h2>{{ 'Transfer details' | translate }}</h2>
 
-	<p><strong>Date: </strong>{{ transfer.dateCrea }}</p>
-	<p><strong>From: </strong>{{ transfer.fromAccountName }}</p>
-	<p><strong>To: </strong>{{ transfer.toAccountName }}</p>
-	<p><strong>Amount: </strong>{{ transfer.amount | currency }}</p>
+	<p><strong>{{ 'Date' | translate }}{{ ':' | translate }} </strong>{{ transfer.dateCrea }}</p>
+	<p><strong>{{ 'From' | translate }}{{ ':' | translate }} </strong>{{ transfer.fromAccountName }}</p>
+	<p><strong>{{ 'To' | translate }}{{ ':' | translate }} </strong>{{ transfer.toAccountName }}</p>
+	<p><strong>{{ 'Amount' | translate }}{{ ':' | translate }} </strong>{{ transfer.amount | currency }}</p>
 
 	<br>
 
-	<a href="#/transfers">View all Transfers</a>
+	<a href="#/transfers">{{ 'View all Transfers' | translate }}</a>
 
 </div>

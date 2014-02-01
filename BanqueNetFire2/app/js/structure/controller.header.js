@@ -2,8 +2,8 @@
 
 angular.module('banqueNetApp.controllers.header', ['banqueNetApp.services.login'])
 
-	.controller('HeaderController', ['$scope', '$rootScope', '$location', 'loginService', '$firebase', 'FBURL',
-		function($scope, $rootScope, $location, loginService, $firebase, FBURL) {
+	.controller('HeaderController', ['$scope', '$rootScope', '$location', 'loginService', '$firebase', 'FBURL', '$translate',
+		function($scope, $rootScope, $location, loginService, $firebase, FBURL, $translate) {
 
 			$scope.$on("angularFireAuth:login", function() {
 				$firebase(new Firebase(FBURL + '/users/' + $rootScope.auth.id), $scope, 'user');
@@ -26,6 +26,10 @@ angular.module('banqueNetApp.controllers.header', ['banqueNetApp.services.login'
 						data.isActive = ($location.path().indexOf(data.link) == 0);
 					}
 				)
-			})
+			});
+
+      $scope.changeLanguage = function (langKey) {
+        $translate.uses(langKey);
+      };
 
 		}]);

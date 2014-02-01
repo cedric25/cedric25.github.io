@@ -1,15 +1,15 @@
 <div data-ng-controller="AccountsController" data-ng-init="findAllUserAccounts();">
 
-	<h2>Accounts</h2>
-	<h3>All Accounts</h3>
+	<h2>{{ 'Accounts' | translate }}</h2>
+	<h3>{{ 'All Accounts' | translate }}</h3>
 
 	<table class="table table-striped">
 		<tbody>
 			<tr data-ng-repeat="account in accountsList">
 				<td><a href="#/accounts/{{ account.id }}">{{account.val.name}}</a></td>
 				<td>{{ account.val.balance | currency }}</td>
-				<td><a href="#/accounts/{{ account.id }}/edit">Edit</a></td>
-				<td><a href="" data-ng-click="removeAccount(account.id)">Remove</a></td>
+				<td><a href="#/accounts/{{ account.id }}/edit">{{ 'Edit' | translate }}</a></td>
+				<td><a href="" data-ng-click="removeAccount(account.id)">{{ 'Remove' | translate }}</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -18,6 +18,6 @@
 
 	<br>
 
-	<a href="#/accounts/create">Create a new account</a>
+	<a href="#/accounts/create">{{ 'Create a new account' | translate }}</a>
 
 </div>

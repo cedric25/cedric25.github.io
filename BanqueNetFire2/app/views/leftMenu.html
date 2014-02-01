@@ -3,7 +3,7 @@
 
 	<ul class="nav nav-list">
 		<li data-ng-repeat="entry in leftMenuEntries" data-ng-class="{ active: entry.isActive }">
-			<a href="#{{entry.link}}">{{entry.title}}</a>
+			<a href="#{{entry.link}}">{{ entry.title | translate }}</a>
 		</li>
 	</ul>
 

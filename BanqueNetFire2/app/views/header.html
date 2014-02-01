@@ -6,14 +6,18 @@
 			<ul class="nav">
 				<li><a class="brand" href="#/">MaBanque.Net</a></li>
 				<li data-ng-repeat="entry in headerEntries" data-ng-show="auth" data-ng-class="{ active: entry.isActive }">
-					<a href="#{{entry.link}}">{{entry.title}}</a>
+					<a href="#{{entry.link}}">{{ entry.title | translate }}</a>
 				</li>
 			</ul>
 
+      <ul class="nav pull-right" style="padding-top: 8px;">
+        <a ng-click="changeLanguage('en')" style="cursor: pointer;"><img src="./img/us.png" /></a>
+        <a ng-click="changeLanguage('fr')" style="cursor: pointer; margin-left: 5px;"><img src="./img/fr.png" /></a>
+      </ul>
+
 			<ul class="nav pull-right" data-ng-hide="!!auth.user">
-				<li><a href="#/signup">Signup</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="#/login">Signin</a></li>
+				<li><a href="#/signup" style="padding-right: 0;">{{ 'Signup' | translate }}</a></li>
+				<li><a href="#/login" style="padding-right: 25px;">{{ 'Signin' | translate }}</a></li>
 			</ul>
 
 			<ul class="nav pull-right" data-ng-show="!!auth.user">
