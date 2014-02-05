@@ -1,5 +1,6 @@
 {
 	"Accounts": "Accounts",
+  "Account name updated.": "Account name updated.",
 	"All Accounts": "All Accounts",
 	"All Transfers": "All Transfers",
 	"Amount": "Amount",
@@ -22,6 +23,7 @@
 	"Name": "Name",
 	"New Transfer": "New Transfer",
 	"Password": "Password",
+  "Please enter a name.": "Please enter a name.",
 	"Remove": "Remove",
 	"Signin": "Signin",
 	"Signup": "Signup",

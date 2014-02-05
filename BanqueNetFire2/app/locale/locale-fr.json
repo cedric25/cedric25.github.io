@@ -1,5 +1,6 @@
 {
 	"Accounts": "Comptes",
+  "Account name updated.": "Nom du compte mis à jour.",
 	"All Accounts": "Tous les comptes",
 	"All Transfers": "Tous les virements",
 	"Amount": "Montant",
@@ -22,6 +23,7 @@
 	"Name": "Nom",
 	"New Transfer": "Nouveau virement",
 	"Password": "Mot de passe",
+  "Please enter a name.": "Veuillez entrer un nom.",
 	"Remove": "Supprimer",
 	"Signin": "Se connecter",
 	"Signup": "S'inscrire",
