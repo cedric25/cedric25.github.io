@@ -5,6 +5,7 @@
 	"Amount": "Montant",
 	"Balance": "Solde",
 	"Choose an account": "Choisir un compte",
+  "Create Account": "Créer le compte",
 	"Create a new account": "Créer un nouveau compte",
 	"Date": "Date",
 	"Detail": "Détail",
@@ -27,6 +28,7 @@
 	"To": "Vers",
 	"Transfers": "Virements",
 	"Transfer details": "Détail du virement",
+  "Update Account": "Valider",
 	"View all Accounts": "Liste des comptes",
 	"View all Transfers": "Liste des virements",
 	":": " :"

@@ -5,6 +5,7 @@
 	"Amount": "Amount",
 	"Balance": "Balance",
 	"Choose an account": "Choose an account",
+  "Create Account": "Create Account",
 	"Create a new account": "Create a new account",
 	"Date": "Date",
 	"Detail": "Detail",
@@ -27,6 +28,7 @@
 	"To": "To",
   "Transfers": "Transfers",
 	"Transfer details": "Transfer details",
+  "Update Account": "Update Account",
 	"View all Accounts": "View all Accounts",
 	"View all Transfers": "View all Transfers",
 	":": ":"
