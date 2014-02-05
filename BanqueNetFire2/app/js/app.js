@@ -7,6 +7,7 @@ angular.module('banqueNetApp', [
 		'banqueNetApp.filters',
 		'banqueNetApp.directives',
 
+    'banqueNetApp.controllers.root',
 		'banqueNetApp.controllers.home',
 		'banqueNetApp.controllers.header',
 		'banqueNetApp.controllers.leftMenu',
@@ -18,7 +19,10 @@ angular.module('banqueNetApp', [
 		'waitForAuth',
 		'routeSecurity',
 
-    'pascalprecht.translate'
+    'ngCookies',
+    'pascalprecht.translate',
+
+    'ngAnimate'
 ])
 
   .run(['loginService', '$rootScope', 'FBURL', function(loginService, $rootScope, FBURL) {

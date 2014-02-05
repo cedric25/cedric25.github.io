@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/bootstrap-responsive.css" />
 </head>
-<body ng-cloak-auth class="hide">
+<body ng-cloak-auth class="hide" ng-controller="RootController">
 
 	<header data-ng-include="'views/header.html'"></header>
 
@@ -38,12 +38,16 @@
   <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+  <script src="//code.angularjs.org/1.2.7/angular-cookies.js"></script>
+  <script src="//code.angularjs.org/1.2.7/angular-animate.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.js"></script>
 
 	<script src="libs/angular-locale_fr-fr.js"></script>
 
   <script src="libs/angular-translate.js"></script>
   <script src="libs/angular-translate-loader-static-files.js"></script>
+  <script src="libs/angular-translate-storage-local.js"></script>
+  <script src="libs/angular-translate-storage-cookie.js"></script>
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
 
@@ -60,8 +64,11 @@
   <script src="js/module.waitForAuth.js"></script>
   <script src="js/module.routeSecurity.js"></script>
 
+  <script src="js/structure/services.notifications.js"></script>
+
 	<script src="js/controller.home.js"></script>
 
+  <script src="js/structure/controllers.root.js"></script>
 	<script src="js/structure/controller.header.js"></script>
 	<script src="js/structure/controller.leftMenu.js"></script>
 

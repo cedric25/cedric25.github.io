@@ -17,7 +17,7 @@ angular.module('banqueNetApp.config', ['pascalprecht.translate'])
       suffix: '.json'
     });
     $translateProvider.preferredLanguage('en');
-    //$translateProvider.useLocalStorage();
+    $translateProvider.useLocalStorage();
   }]);
 
 
