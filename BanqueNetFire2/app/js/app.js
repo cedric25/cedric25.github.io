@@ -25,8 +25,18 @@ angular.module('banqueNetApp', [
     'ngAnimate'
 ])
 
-  .run(['loginService', '$rootScope', 'FBURL', function(loginService, $rootScope, FBURL) {
+  .run(['loginService', '$rootScope', 'FBURL', 'Notifications', function(loginService, $rootScope, FBURL, Notifications) {
+
     // establish authentication
     $rootScope.auth = loginService.init('/login');
     $rootScope.FBURL = FBURL;
+
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
+      // Clear notifications
+      if (!Notifications.isKeepMessage()) {
+        Notifications.clear();
+      } else {
+        Notifications.setKeepMessage(false);
+      }
+    });
   }]);
