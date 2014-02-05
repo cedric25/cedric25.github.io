@@ -62,8 +62,8 @@ angular.module('banqueNetApp.controllers.accounts',
         }
         if (!!$scope.accountId) {
           AccountsService.updateName($scope.accountId, $scope.account.name);
-
           $scope.account = null;
+          Notifications.setGreenMessage('Account name updated.', true);
           $location.path('/accounts');
         }
       };
