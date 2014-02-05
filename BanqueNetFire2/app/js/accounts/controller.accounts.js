@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('banqueNetApp.controllers.accounts',
-		['banqueNetApp.services.accounts', 'banqueNetApp.services.operations', 'banqueNetApp.service.firebase'])
+		['banqueNetApp.services.accounts', 'banqueNetApp.services.operations', 'banqueNetApp.service.firebase', 'banqueNetApp.services.notifications'])
 
-	.controller('AccountsController', ['$scope', '$rootScope', '$routeParams', '$location', 'AccountsService', 'OperationsService',
-		function($scope, $rootScope, $routeParams, $location, AccountsService, OperationsService) {
+	.controller('AccountsController', ['$scope', '$rootScope', '$routeParams', '$location', 'AccountsService', 'OperationsService', 'Notifications',
+		function($scope, $rootScope, $routeParams, $location, AccountsService, OperationsService, Notifications) {
 
 			$scope.accountId = $routeParams.accountId;
 			$scope.noAccount = !$routeParams.accountId;
@@ -55,6 +55,26 @@ angular.module('banqueNetApp.controllers.accounts',
 
 				}
 			};
+
+      $scope.update = function() {
+        if (!validateUpdate()) {
+          return;
+        }
+        if (!!$scope.accountId) {
+          AccountsService.updateName($scope.accountId, $scope.account.name);
+
+          $scope.account = null;
+          $location.path('/accounts');
+        }
+      };
+
+      function validateUpdate() {
+        if (!$scope.account.name) {
+          Notifications.setRedMessage('Please enter a name.');
+          return false;
+        }
+        return true;
+      }
 
 			$scope.create = function() {
 
