@@ -1,3 +1,5 @@
+<div ng-include src="'views/structure/notifications.html'"></div>
+
 <div data-ng-controller="AccountsController" data-ng-init="findOneAccount(); findAllUsers();">
 
 	<form class="form-horizontal" novalidate="novalidate">
@@ -11,7 +13,8 @@
 
 		<div class="control-group">
 			<div class="controls">
-				<button data-ng-click="create()" data-ng-show="noAccount" class="btn btn-primary">Create Account</button>
+        <button data-ng-click="update()" data-ng-hide="noAccount" class="btn btn-primary">{{ 'Update Account' | translate }}</button>
+				<button data-ng-click="create()" data-ng-show="noAccount" class="btn btn-primary">{{ 'Create Account' | translate }}</button>
 			</div>
 		</div>
 
