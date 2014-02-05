@@ -1,6 +1,8 @@
-<div class="alert alert-success animate-show" ng-show="hasGreenMessage()">
+<div class="alert alert-success alert-dismissable animate-show" ng-show="hasGreenMessage()">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
   <span class="fam-accept"></span>{{ getGreenMessage() | translate }}
 </div>
-<div class="alert alert-error animate-show" ng-show="hasRedMessage()">
+<div class="alert alert-error alert-dismissable animate-show" ng-show="hasRedMessage()">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
   <span class="fam-error"></span>{{ getRedMessage() | translate }}
 </div>
