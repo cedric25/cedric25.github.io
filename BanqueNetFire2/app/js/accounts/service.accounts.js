@@ -30,12 +30,17 @@ angular.module('banqueNetApp.services.accounts', ['banqueNetApp.service.firebase
 				});
 			};
 
+      var updateName = function(accountId, newName) {
+        getAccountRef(accountId).child('name').set(newName);
+      };
+
 			return {
 
 				getAccountsRef: getAccountsRef,
 				getAccountRef: getAccountRef,
 				getUserAccountsRef: getUserAccountsRef,
 				updateBalance: updateBalance,
+        updateName: updateName,
 
 				collection: function (authId) {
 					return getUserAccountsRef(authId);
@@ -79,7 +84,6 @@ angular.module('banqueNetApp.services.accounts', ['banqueNetApp.service.firebase
 					var accountRef = firebaseRef('users').child('/' + authId + '/accounts/' + accountId);
 
 					accountRef.on('value', function(snapshot) {
-						debugger
 						var actualBalance = snapshot.balance;
 						actualBalance = parseFloat(actualBalance);
 						var amount = parseFloat(operation.amount);
