@@ -1,9 +1,7 @@
 class ListController {
 
-  constructor(Items, $log) {
+  constructor(Items) {
     'ngInject';
-
-    //$log.info(new Items());
 
     var list = new Items();
 
