@@ -1,13 +1,24 @@
+/**
+ * Controller of the list page
+ */
 class ListController {
 
   constructor(Items) {
     'ngInject';
 
+    // Get all items in the constant
     var list = new Items();
 
     this.chunkList = this.splitList(list, 3);
   }
 
+  /**
+   * Split a table in groups of 'chunkSize' elements
+   * > Display properly a row of bootstrap cols
+   * @param list
+   * @param chunkSize
+   * @returns {Array}
+   */
   splitList(list, chunkSize) {
     var result = [];
     var chunk = {};
