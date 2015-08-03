@@ -46,7 +46,7 @@ footer {
   width: 100%;
 }
 
-/* list */
+/* ----- list ----- */
 .container-list {
   h3 {
     margin-top: 10px;
@@ -56,13 +56,24 @@ footer {
     text-align: center;
   }
   .img-responsive {
-    max-height: 270px;
     margin: 0 auto;
+
+    @media (min-width: $screen-md-min) {
+      max-height: 215px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      max-height: 265px;
+    }
   }
 }
 
-/* detail */
+/* ----- detail ----- */
 .container-detail {
+
+  &.container {
+    padding: 0;
+  }
 
   .col-padding-top {
     margin-top: 20px;
@@ -75,8 +86,13 @@ footer {
   .big-picture-wrapper {
     text-align: center;
 
+    @media (max-width: $screen-md-min) {
+      max-width: 750px;
+    }
+
     img {
       max-height: 562px;
+      max-width: 100%;
     }
   }
 
