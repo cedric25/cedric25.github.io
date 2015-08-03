@@ -1,3 +1,6 @@
+/**
+ * Controller of the detail page
+ */
 class DetailController {
 
   constructor($stateParams, Items) {
@@ -14,11 +17,41 @@ class DetailController {
 
     // Init of the image displayed
     this.selectPicture('thumb');
+
+    this.item.photos.unshift('thumb');
+    this.chunkPhotosList = this.splitList(this.item.photos, 4);
   }
 
+  /**
+   * Zoom on a picture when clicked
+   * @param filename
+   */
   selectPicture(filename) {
     this.selectedPicName = filename;
     this.pathBigPicture = 'assets/images/items/' + this.name + '/' + filename + '.jpg';
+  }
+
+  /**
+   * Split a table in groups of 'chunkSize' elements
+   * > Display properly a row of bootstrap cols
+   * @param list
+   * @param chunkSize
+   * @returns {Array}
+   */
+  splitList(list, chunkSize) {
+    var result = [];
+    var chunk = [];
+    angular.forEach(list, (item) => {
+      if (_.size(chunk) >= chunkSize) {
+        result.push(chunk);
+        chunk = [];
+      }
+      chunk.push(item);
+    });
+    if (_.size(chunk) !== 0) {
+      result.push(chunk);
+    }
+    return result;
   }
 
 }

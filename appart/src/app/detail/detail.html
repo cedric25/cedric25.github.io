@@ -2,7 +2,7 @@
 
   <div class="row">
 
-    <!-- Grande image -->
+    <!-- Big picture -->
     <div class="col-md-8 big-picture-wrapper">
       <img ng-src="{{detail.pathBigPicture}}" alt="" />
     </div>
@@ -16,23 +16,21 @@
     </div>
   </div>
 
+  <!-- Small pictures on which we can click to zoom -->
   <div class="row">
     <div class="col-md-8">
-      <div class="row">
-        <div class="col-md-3 col-padding-top little-picture-wrapper">
-          <img ng-src="assets/images/items/{{detail.item.name}}/thumb.jpg"
-               ng-click="detail.selectPicture('thumb')" alt=""
-               ng-class="{'selected': detail.selectedPicName === 'thumb'}" />
-        </div>
-        <div ng-repeat="filename in detail.item.photos" class="col-md-3 col-padding-top little-picture-wrapper">
-          <img ng-src="assets/images/items/{{detail.item.name}}/{{filename}}.jpg"
-               ng-click="detail.selectPicture(filename)" alt=""
-               ng-class="{'selected': detail.selectedPicName === filename}" />
+      <div ng-repeat="chunk in detail.chunkPhotosList">
+        <div class="row">
+          <div ng-repeat="(filenameKey, filename) in chunk" class="col-xs-3 col-padding-top little-picture-wrapper">
+            <img ng-src="assets/images/items/{{detail.item.name}}/{{filename}}.jpg"
+                 ng-click="detail.selectPicture(filename)" alt=""
+                 ng-class="{'selected': detail.selectedPicName === filename}"
+                 class="img-responsive" />
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- /.row -->
 
   <!-- Footer -->
   <footer>
@@ -41,7 +39,6 @@
         <p></p>
       </div>
     </div>
-    <!-- /.row -->
   </footer>
 
 </div>
