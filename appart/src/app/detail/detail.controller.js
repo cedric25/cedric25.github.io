@@ -17,6 +17,7 @@ class DetailController {
   }
 
   selectPicture(filename) {
+    this.selectedPicName = filename;
     this.pathBigPicture = 'assets/images/items/' + this.name + '/' + filename + '.jpg';
   }
 

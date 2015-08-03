@@ -85,6 +85,10 @@ footer {
 
     img {
       max-height: 124px;
+
+      &.selected {
+        border: 2px solid #101010;
+      }
     }
   }
 
