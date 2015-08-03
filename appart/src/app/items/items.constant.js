@@ -1,3 +1,7 @@
+/**
+ * List of all items
+ * FIXME Define constant in another way...
+ */
 class Items {
 
   constructor() {
@@ -25,12 +29,13 @@ class Items {
         prix: 20,
         photos: ['01', '02']
       },
-      /*bureauWenge: {
+      bureauWenge: {
         name: 'bureauWenge',
         libelle: 'Bureau',
-        desc: 'Acheté 210€ à Conforama en avril 2105. Dimensions : ',
-        prix: 150
-      },*/
+        desc: '',
+        prix: 150,
+        photos: ['01', '02']
+      },
       tableEtChaises: {
         name: 'tableEtChaises',
         libelle: 'Table + 4 chaises',
@@ -44,19 +49,33 @@ class Items {
         desc: '',
         prix: 450,
         photos: ['01', '02', '03', '04']
-      }/*,
+      },
       frigo: {
         name: 'frigo',
         libelle: 'Réfrigérateur',
-        desc: 'Acheté 360€ en janvier 2013.',
-        prix: 180
+        desc: '',
+        prix: 180,
+        photos: ['01']
       },
       petitMeubleCuisine: {
         name: 'petitMeubleCuisine',
         libelle: 'Meuble de rangement',
-        desc: 'Acheté 80€ en février 2103. Dimensions : ',
-        prix: 30
-      }*/
+        desc: '',
+        prix: 30,
+        photos: ['01', '02', '03']
+      },
+      ecranPc: {
+        name: 'ecranPc',
+        libelle: 'Ecran Samsung 21.5" LED',
+        prix: 100,
+        photos: ['01', '02', '03', '04']
+      },
+      vaio: {
+        name: 'vaio',
+        libelle: 'Ordinateur portable Sony Vaio',
+        prix: 200,
+        photos: ['01', '02', '03']
+      }
     };
   }
 
