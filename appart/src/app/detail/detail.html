@@ -5,20 +5,8 @@
     <!-- Big picture -->
     <div class="col-md-8 big-picture-wrapper">
       <img ng-src="{{detail.pathBigPicture}}" alt="" />
-    </div>
 
-    <!-- Description -->
-    <div class="col-md-4 col-padding-top">
-      <div ng-include="detail.templateDescUrl" style="padding-right: 20px;"></div>
-      <p>
-        <br><u>Prix :</u>&nbsp;&nbsp;{{ detail.item.prix | currency }} à débattre<br><br>
-      </p>
-    </div>
-  </div>
-
-  <!-- Small pictures on which we can click to zoom -->
-  <div class="row">
-    <div class="col-md-8">
+      <!-- Small pictures on which we can click to zoom -->
       <div ng-repeat="chunk in detail.chunkPhotosList">
         <div class="row">
           <div ng-repeat="(filenameKey, filename) in chunk" class="col-xs-3 col-padding-top little-picture-wrapper">
@@ -29,6 +17,14 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Description -->
+    <div class="col-md-4 col-padding-top">
+      <div ng-include="detail.templateDescUrl" style="padding-right: 20px;"></div>
+      <p>
+        <br><u>Prix :</u>&nbsp;&nbsp;{{ detail.item.prix | currency }} à débattre<br><br>
+      </p>
     </div>
   </div>
 

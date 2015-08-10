@@ -22,13 +22,13 @@ class Items {
         prix: 100,
         photos: ['01', '02']
       },
-      meubleEntree: {
+      /*meubleEntree: {
         name: 'meubleEntree',
         libelle: 'Petit meuble d\'entrée',
         desc: '',
         prix: 20,
         photos: ['01', '02']
-      },
+      },*/
       bureauWenge: {
         name: 'bureauWenge',
         libelle: 'Bureau',
@@ -50,12 +50,18 @@ class Items {
         prix: 450,
         photos: ['01', '02', '03', '04']
       },
+      grandMeubleSalon: {
+        name: 'grandMeubleSalon',
+        libelle: 'Meuble vitrine',
+        prix: 50,
+        photos: ['01', '02']
+      },
       frigo: {
         name: 'frigo',
         libelle: 'Réfrigérateur',
         desc: '',
         prix: 180,
-        photos: ['01']
+        photos: []
       },
       petitMeubleCuisine: {
         name: 'petitMeubleCuisine',
@@ -64,16 +70,28 @@ class Items {
         prix: 30,
         photos: ['01', '02', '03']
       },
+      ventilateur: {
+        name: 'ventilateur',
+        libelle: 'Ventilateur sur pied',
+        prix: 30,
+        photos: ['01', '02']
+      },
       ecranPc: {
         name: 'ecranPc',
         libelle: 'Ecran Samsung 21.5" LED',
         prix: 100,
         photos: ['01', '02', '03', '04']
       },
-      vaio: {
+      /*vaio: {
         name: 'vaio',
         libelle: 'Ordinateur portable Sony Vaio',
         prix: 200,
+        photos: ['01', '02', '03']
+      },*/
+      imprimante: {
+        name: 'imprimante',
+        libelle: 'Imprimante Epson',
+        prix: 40,
         photos: ['01', '02', '03']
       }
     };

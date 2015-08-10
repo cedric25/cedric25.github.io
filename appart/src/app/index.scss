@@ -97,10 +97,9 @@ footer {
   }
 
   .little-picture-wrapper {
-    text-align: center;
-
     img {
       max-height: 124px;
+      margin: 0 auto;
 
       &.selected {
         border: 2px solid #101010;

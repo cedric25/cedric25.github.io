@@ -40,6 +40,9 @@ class DetailController {
    */
   splitList(list, chunkSize) {
     var result = [];
+    if (list.length === 0) {
+      return result;
+    }
     var chunk = [];
     angular.forEach(list, (item) => {
       if (_.size(chunk) >= chunkSize) {
