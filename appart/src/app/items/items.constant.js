@@ -70,12 +70,12 @@ class Items {
         prix: 30,
         photos: ['01', '02', '03']
       },
-      ventilateur: {
+      /*ventilateur: {
         name: 'ventilateur',
         libelle: 'Ventilateur sur pied',
         prix: 30,
         photos: ['01', '02']
-      },
+      },*/
       ecranPc: {
         name: 'ecranPc',
         libelle: 'Ecran Samsung 21.5" LED',
