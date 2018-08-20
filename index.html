@@ -1,26 +1,56 @@
 <!doctype html>
 <html>
+
 	<head>
 		<title>cedric25 github page</title>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .old .list-group-item:nth-of-type(1) {
+        color: #428BCA;
+      }
+      .old .list-group-item:nth-of-type(2) {
+        color: #439F43;
+      }
+      .newer .list-group-item:nth-of-type(1) {
+        color: #D65442;
+      }
+    </style>
 	</head>
+
 	<body>
 
 		<div class="container">
 
-			<h1 style="margin: 30px 0 30px;">Some apps I've been working on...</h1>
+			<h1 style="margin: 30px 0 30px;">
+        Some (old) apps I've been working on...
+      </h1>
 
-			<div class="list-group">
-			  <a href="./BanqueNetFire2/app" class="list-group-item" style="color: #428BCA;">
+			<div class="list-group old">
+			  <a href="./BanqueNetFire2/app" class="list-group-item">
 			    <h4 class="list-group-item-heading">BanqueNetApp</h4>
 			    <p class="list-group-item-text">A banking app based on AngularJS and Firebase</p>
 			  </a>
-			  <a href="./ang-news/app" class="list-group-item" style="color: #439F43;">
+			  <a href="./ang-news/app" class="list-group-item">
 			    <h4 class="list-group-item-heading">ang-news from Thinkster</h4>
 			    <p class="list-group-item-text">AngularJS and Firebase app built by following tutorial on thinkster.io</p>
 			  </a>
 			</div>
+
+      <h2 style="margin: 30px 0 30px;">
+        Newer stuff:
+      </h2>
+
+      <div class="list-group newer">
+        <a href="https://cedric25.github.io/ages-and-birthdays" class="list-group-item">
+          <h4 class="list-group-item-heading">Ages and Birthdays</h4>
+          <p class="list-group-item-text">
+            Can't remember ages and birthdays? Me neither...
+            <br>(Vue.js / localStorage / Firebase / Google Auth)
+          </p>
+        </a>
+      </div>
 
 		</div>
 
